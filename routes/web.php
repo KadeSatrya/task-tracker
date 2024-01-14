@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers as Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Controllers\HomeController::class, 'index'])->name("homeIndex");
+Route::get('/addTask', [Controllers\TaskController::class, 'index'])->name("addTaskIndex");
+Route::post('/addTask', [Controllers\TaskController::class, 'submit'])->name("addTaskSubmit");
