@@ -9,7 +9,7 @@
 <body>
     <div>This is for adding Task</div>
     <div>
-        <form action="{{ route('addTaskSubmit') }}" method="post">
+        <form action="{{ route('task.post') }}" method="post">
             @csrf
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" required>
