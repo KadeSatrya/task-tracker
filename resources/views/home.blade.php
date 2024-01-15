@@ -40,6 +40,11 @@
             <button type="button">Go to Add Task</button>
         </a>
     </div>
+    <div>
+        <a href="{{ route('logout') }}">
+            <button type="button">Log Out</button>
+        </a>
+    </div>
 </body>
 
 

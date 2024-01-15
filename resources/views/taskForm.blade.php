@@ -24,6 +24,11 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+    <div>
+        <a href="{{ route('home.index') }}">
+            <button type="button">Back</button>
+        </a>
+    </div>
 </body>
 
 
