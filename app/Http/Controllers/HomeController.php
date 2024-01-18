@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        $tasks = Task::all();
+        $tasks = Task::where('user_id', auth()->id())->get();
         return view('home', ['tasks' => $tasks]);
     }
 }
