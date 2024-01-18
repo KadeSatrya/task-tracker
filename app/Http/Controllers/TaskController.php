@@ -26,8 +26,6 @@ class TaskController extends Controller
     }
 
     public function changeStatus($id){
-        Log::info('Route taken: ' . request()->path());
-
         $task = Task::where('id', $id)->first();
         $task->isFinished = !($task->isFinished);
         $task->save();

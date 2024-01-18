@@ -11,8 +11,8 @@
     <form action="{{ route('register.submit') }}" method="post">
         @csrf
         <div>
-            <label for="email">Name:</label>
-            <input type="email" id="email" name="email" required> 
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required> 
         </div>
         <div>
             <label for="email">Email:</label>
